@@ -1,0 +1,11 @@
+﻿id,title,category,keywords,content
+KB1001,VPN connection troubleshooting,Network,"vpn connection remote access","Restart the VPN client, verify internet connectivity, clear saved credentials, and reconnect using the current company profile."
+KB1002,Laptop performance cleanup,Hardware,"laptop slow performance cleanup","Close unused applications, check startup apps, verify disk space, run updates, and restart before escalating to desktop support."
+KB1003,Email sync repair,Software,"outlook email sync mailbox","Confirm network connectivity, restart Outlook, rebuild the profile if needed, and verify mailbox quota."
+KB1004,Password reset issues,Access,"password reset login expired","Request a fresh password reset link and complete the reset within the expiration window."
+KB1005,Printer queue recovery,Hardware,"printer queue stuck printing","Clear the printer queue, restart the print spooler, and resend a small test document."
+KB1006,Shared drive permissions,Access,"shared drive access permission","Confirm the requested folder path and ask the folder owner to grant the correct security group access."
+KB1007,Application crash first response,Software,"application crash launch error","Capture the error message, clear the app cache, reinstall the latest approved version, and attach logs to the incident."
+KB1008,WiFi connectivity basics,Network,"wifi wireless connection","Forget the network, reconnect with current credentials, verify signal strength, and test from another device."
+KB1009,Blue screen triage,Hardware,"blue screen startup crash","Record the stop code, disconnect recent peripherals, boot into safe mode, and run hardware diagnostics."
+KB1010,Software installation failure,Software,"software install installation failed","Check admin rights, confirm disk space, retry from the software center, and capture the installer error code."

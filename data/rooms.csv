@@ -1,0 +1,11 @@
+﻿room_no,type,price_per_night,status,available_from,available_to,guest_name,booking_id
+11,standard,2500,available,2026-06-20,2026-07-31,,
+12,standard,2500,available,2026-06-20,2026-07-31,,
+21,deluxe,4200,available,2026-06-20,2026-07-31,,
+22,deluxe,4200,available,2026-06-20,2026-07-31,,
+23,deluxe,4500,booked,2026-06-25,2026-06-28,Riya Mehta,BK-SEED001
+31,suite,7500,available,2026-06-20,2026-07-31,,
+32,suite,8200,available,2026-06-24,2026-07-15,,
+41,standard,2800,available,2026-06-20,2026-06-30,,
+42,deluxe,4600,available,2026-06-23,2026-07-10,,
+51,suite,9000,booked,2026-06-26,2026-06-29,Amit Singh,BK-SEED002

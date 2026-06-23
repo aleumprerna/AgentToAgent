@@ -1,0 +1,30 @@
+services:
+  servicenow-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: servicenow-agent
+    env_file:
+      - .env
+    environment:
+      AGENT_PORT: 8001
+      AGENT_BASE_URL: http://localhost:8001
+      CSV_PATH: data/incident.csv
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data
+      - ./exports:/app/exports
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=3).read()",
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3

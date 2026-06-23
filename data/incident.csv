@@ -1,0 +1,11 @@
+number,short_description,priority,state,caller,category,assigned_to,opened_at
+INC99004,Email service is unavailable,High,In Progress,Prerna Jain,Software,Service Desk,2026-06-10 09:15:00
+INC99005,Laptop not working after restart,Medium,New,Shantanu Sharma,Hardware,,2026-06-10 10:00:00
+INC99006,VPN connection drops every few minutes,High,New,Komal Pareek,Network,Network Support,2026-06-11 11:25:00
+INC99007,Printer queue is stuck,Low,Resolved,Aarav Sharma,Hardware,Desktop Support,2026-06-11 12:10:00
+INC99008,Password reset link expired,Medium,In Progress,Abhinay Kumar,Access,Identity Team,2026-06-12 08:30:00
+INC99009,Outlook is not syncing emails,High,New,Aamin Monu,Software,Service Desk,2026-06-12 09:45:00
+INC99010,Shared drive access denied,Medium,On Hold,Aayush Gattawar,Access,Service Desk,2026-06-13 14:20:00
+INC99011,Application crashes on launch,High,In Progress,Abby Olson,Software,App Support,2026-06-13 15:05:00
+INC99012,Laptop is running very slow,Medium,New,Aarav Booker,Hardware,Desktop Support,2026-06-14 16:40:00
+INC99013,Unable to connect to office WiFi,High,New,Aalana Reddy,Network,Network Support,2026-06-15 10:35:00
