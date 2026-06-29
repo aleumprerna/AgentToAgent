@@ -1,0 +1,5 @@
+HR collects only the employee information needed to support employment operations.
+
+Typical information includes employee identity, contact details, job role, department, manager, attendance, leave records, payroll-related information, benefits selections, onboarding records, and compliance acknowledgements.
+
+Employee data is used for HR administration, payroll, benefits, workforce planning, policy compliance, employee support, and audit needs. Access should be limited to authorized teams with a valid business purpose.

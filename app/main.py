@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel, Field
 
 from app.config import get_settings
 from app.graph import incident_graph
@@ -11,10 +12,17 @@ from app.schemas import (
     ToolRunResponse,
 )
 from app.tool_registry import call_tool
+from integrations.master_integration.router import route_user_message
 
 
 settings = get_settings()
 app = FastAPI(title="A2A ServiceNow Incident Agent")
+
+
+class IntegrationTestRequest(BaseModel):
+    message: str
+    conversation_id: str | None = None
+    metadata: dict = Field(default_factory=dict)
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -82,3 +90,20 @@ def run_tool(request: ToolRunRequest) -> ToolRunResponse:
         result=tool_result.get("result"),
         error=tool_result.get("error"),
     )
+
+
+@app.post("/integrations/test")
+async def test_integration(request: IntegrationTestRequest) -> dict:
+    result = await route_user_message(
+        message=request.message,
+        conversation_id=request.conversation_id,
+    )
+    if result.get("routed"):
+        return result
+
+    return {
+        "selected_integration_type": None,
+        "selected_agent": None,
+        "answer": "No integration route matched. Existing master app behavior can continue.",
+        "raw_response": result,
+    }

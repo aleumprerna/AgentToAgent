@@ -1,8 +1,10 @@
 fastapi
 uvicorn
+httpx
 langgraph
 langchain-openai
 pandas
 requests
 python-dotenv
 pydantic
+mcp

@@ -1,0 +1,52 @@
+services:
+  hr-agent:
+    build:
+      context: .
+      dockerfile: integrations/a2a_agents/hr_agent/Dockerfile
+    container_name: hr-agent
+    ports:
+      - "8101:8101"
+    restart: unless-stopped
+
+  it-agent:
+    build:
+      context: .
+      dockerfile: integrations/a2a_agents/it_agent/Dockerfile
+    container_name: it-agent
+    ports:
+      - "8102:8102"
+    restart: unless-stopped
+
+  servicenow-consultant-agent:
+    build:
+      context: .
+      dockerfile: integrations/a2a_agents/servicenow_agent/Dockerfile
+    container_name: servicenow-consultant-agent
+    environment:
+      CSV_PATH: data/incident.csv
+    ports:
+      - "8103:8103"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  hotel-agent:
+    build:
+      context: .
+      dockerfile: integrations/a2a_agents/hotel_agent/Dockerfile
+    container_name: hotel-agent
+    ports:
+      - "8104:8104"
+    restart: unless-stopped
+
+  email-mcp:
+    build:
+      context: .
+      dockerfile: integrations/mcp_servers/email_mcp/Dockerfile
+    container_name: email-mcp
+    environment:
+      EMAIL_MCP_HOST: 0.0.0.0
+      EMAIL_MCP_PORT: 8201
+    ports:
+      - "8201:8201"
+    restart: unless-stopped
